@@ -1,0 +1,25 @@
+# Konfigurasi rahasia — JANGAN pernah diunggah ke Git/publik
+.env
+
+# Cache Python
+python_service/__pycache__/
+python_service/*.pyc
+python_service/model_tfidf.pkl
+python_service/venv/
+python_service/layanan.log
+
+# File hasil unggahan pengguna (biarkan foldernya ada lewat .gitkeep,
+# tapi isinya tidak perlu ikut ke Git)
+uploads/desain/*
+!uploads/desain/.gitkeep
+uploads/produksi/*
+!uploads/produksi/.gitkeep
+
+# Sistem operasi / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Hasil backup otomatis (scripts/backup_database.sh / .bat) — jangan ikut Git,
+# karena berisi salinan database + file produksi. Simpan di tempat terpisah.
+backups/

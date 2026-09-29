@@ -1,0 +1,14 @@
+# Keamanan: folder ini hanya untuk menyimpan file gambar/produksi hasil unggahan.
+# Baris di bawah mencegah file PHP (atau script lain) yang mungkin tersasar
+# ke sini untuk benar-benar DIJALANKAN oleh server — file tetap bisa ada,
+# tapi kalau dibuka lewat browser hanya akan diunduh/ditampilkan mentah,
+# bukan dieksekusi sebagai kode.
+# (Catatan: berlaku untuk server Apache. Kalau memakai Nginx, tambahkan blok
+# yang setara di konfigurasi server — lihat PANDUAN_HOSTING_VPS.md.)
+
+<FilesMatch "\.(php|phtml|php3|php4|php5|php7|pl|py|cgi|sh|asp|aspx)$">
+    Require all denied
+</FilesMatch>
+
+Options -ExecCGI
+php_flag engine off
