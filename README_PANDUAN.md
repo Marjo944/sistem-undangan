@@ -1,6 +1,5 @@
 # Panduan Menjalankan Sistem — Rotama Jaya
 
-## 🆕 Revisi Terbaru — Fitur Admin & Operasional
 1. **"Jalankan Sistem" dari web admin** — layanan Python Flask kini bisa
    dimulai hanya dengan klik tombol di dashboard atau halaman Status Sistem
    (sidebar → "Lainnya" → "Status Sistem"), tanpa perlu membuka terminal
